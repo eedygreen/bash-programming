@@ -20,6 +20,7 @@ fi
 # -r for read permission
 # -w for write permission
 # -x for execute permission
+# -f for valid file or not
 
 # check for directory
 
