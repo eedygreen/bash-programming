@@ -1,5 +1,6 @@
 #! /bin/bash
 
+
 # this script checks for a valid file and permission and append the text to the file
 
 echo -e "Enter the name of the file: \c"
