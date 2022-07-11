@@ -2,7 +2,7 @@
 
 echo -e "Enter your age: \c"
 
-IFS=read -r your_age
+IFS= read -r your_age
 
 if [ "$your_age" -gt 16 ] && [ "$your_age" -lt 25 ]
 then
