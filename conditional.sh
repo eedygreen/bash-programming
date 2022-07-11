@@ -52,5 +52,5 @@ if (( $name >= "eedy" ))
 then
     echo "it works for parenthesis and brackets"
 else
-    echo " it sucks!"
-fijust testing
+    echo "it sucks!"
+fi
