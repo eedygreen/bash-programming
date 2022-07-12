@@ -8,7 +8,7 @@ echo -e "Enter sume numbers: \c"
 
 IFS= read -a numbers
 
-for i in $numbers[@]; do
-    let sum+=$i
+for i in ${numbers[@]}; do
+    (( sum+=$i ))
 done
  echo "The sum of the number you entered is: $sum"
