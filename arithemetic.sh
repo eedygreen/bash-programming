@@ -26,5 +26,5 @@ read -ra numbers
  # Multiplication
  echo "The product of the given numbers is: $((${numbers[@]/%/ *}1))"
  
- # Divis
+ # Division
  echo "The difference of the given numbers is: $((${numbers[@]/%/ /}1))"
