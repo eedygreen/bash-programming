@@ -18,13 +18,13 @@ read -a numbers
  echo "The sum of the give numbers is: $sum"
 
 # Addition
- echo "The sum of the give numbers is: $(( ${numbers[@]/%/ +} 0))" #https://stackoverflow.com/questions/13635293/how-can-i-find-the-sum-of-the-elements-of-an-array-in-bash#:~:text=array%20elements%3A%206-,Explanation,-%3A
+ echo "The sum of the give numbers is: $((${numbers[@]/%/ +}0))" #https://stackoverflow.com/questions/13635293/how-can-i-find-the-sum-of-the-elements-of-an-array-in-bash#:~:text=array%20elements%3A%206-,Explanation,-%3A
  
  # Subtraction
- echo "The subtraction of the given numbers is: $(( ${numbers[@]/%/ -} 0))"
+ echo "The subtraction of the given numbers is: $((${numbers[@]/%/ -}0))"
  
  # Multiplication
- echo "The product of the given numbers is: $(( ${numbers[@]/%/ *} 1))"
+ echo "The product of the given numbers is: $((${numbers[@]/%/ *}1))"
  
- # Division
- echo "The difference of the given numbers is: $(( ${numbers[@]/%/ /} 1))"
+ # Divis
+ echo "The difference of the given numbers is: $((${numbers[@]/%/ /}1))"
