@@ -6,7 +6,7 @@ echo -e "Enter sum numbers: \c"
 
 # echo "$(( ${numbers[0]} + ${numbers[1]} ))"
 
-read -a numbers
+read -ra numbers
 
 # for i in ${numbers[@]}; do
 #     (( sum_given_numbers+=$i ))
