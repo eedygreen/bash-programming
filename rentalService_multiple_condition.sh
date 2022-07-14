@@ -1,6 +1,7 @@
 #! /bin/bash
 
 # pass the arguement upon running the script
+
 echo -e "Enter the service you want to rent: \c"
 read -r transport_service
 
