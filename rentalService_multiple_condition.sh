@@ -1,8 +1,8 @@
 #! /bin/bash
 
 # pass the arguement upon running the script
-
-transport_service=$1
+echo -e "Enter the service you want to rent: \c"
+read -r transport_service
 
 # case expression in 
 #      pattern)
