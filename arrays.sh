@@ -25,8 +25,8 @@ list_items[2]='Ayobami' #this will replace the element in the third position
 echo "New elements: ${list_items[*]}"
 
 # remove an element with the unset
-unset list_items[6]     # this will remove the element at index position 6
-
+unset "list_items[2]"    # this will remove the element at index position 6
+echo "remained item: ${list_items[*]}"
 ######  Note #########
 # Bash permits empty arrays
 # i.e you can chose to insert in any position regardless the indexes before are empty or not
