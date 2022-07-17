@@ -8,8 +8,9 @@
 echo -e "Enter the age number and then the name: \c"
 
 read -ra arr
+name=eedy
 # cpmpare age is equal to 10
-if [ ${arr[0]} -eq 10 ]
+if [ "${arr[0]}" -eq 10 ]
 then 
     echo "S/he is a minor"
 fi
@@ -31,8 +32,7 @@ fi
 
 # strings comparison
 
-name=eedy
-if [ ${arr[1]} == "eedy" ] # this is same as $name -eq "eedy"
+if [ "${arr[1]}" == "$name" ] # this is same as $name -eq "eedy"
 then
     echo "Its my name"
 fi
@@ -40,10 +40,10 @@ fi
 # Note
 # you must use double brackets when comparing strings too
 # only < or < are used with double brackets [[]]
-if [[ ${arr[1]} > "eedy" ]]
+if [[ "${arr[1]}" > "$name" ]]
 then
     echo "it's not my name"
-elif [ ${arr[1]} == "eedy" ]
+elif [ "${arr[1]}" == "$name" ]
 then 
     echo "its my name"
 else
@@ -52,7 +52,7 @@ fi
 
 # use double brackets when using >= or <=
 
-if [[ ${arr[1]} -ge "eedy" ]]
+if [[ "${arr[1]}" -ge "$name" ]]
 then
     echo "it works for parenthesis and brackets"
 else
