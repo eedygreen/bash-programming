@@ -10,12 +10,12 @@ read -r age
 
 while [ $age -le 18 ]
 do
-    echo "$age is a minor"
+    echo "age $age is a minor"
         (( ++age ))
 done
 
-while (( $age < 18 ))
+while (( $age <= 18 ))
 do 
-    echo "$age is minor"
-    (( ++age ))
+    echo "At $age I'm still a minor"
+        (( ++age ))
 done
