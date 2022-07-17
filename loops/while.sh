@@ -13,9 +13,3 @@ do
     echo "age $age is a minor"
         (( ++age ))
 done
-
-while $(( age <= 18 ))
-do 
-    echo "At age $age s/he is still a minor"
-        (( age++ ))
-done
