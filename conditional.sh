@@ -48,6 +48,8 @@ else
     echo "its someone else"
 fi
 
+# use double brackets when using >= or <=
+
 if (( $name >= "eedy" ))
 then
     echo "it works for parenthesis and brackets"
