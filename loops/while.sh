@@ -8,14 +8,14 @@ read -r age
     # 
 # done
 
-while [ $age -le 18 ]
+while [ "$age" -le 18 ] # added double quote to prevent globbing and word splitting
 do
     echo "age $age is a minor"
         (( ++age ))
 done
 
-while (( $age <= 18 ))
+while $(( age <= 18 ))
 do 
-    echo "At $age I'm still a minor"
-        (( ++age ))
+    echo "At age $age s/he is still a minor"
+        (( age++ ))
 done
