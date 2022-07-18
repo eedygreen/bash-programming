@@ -6,10 +6,10 @@
 # done
 # example
 
-echo ${BASH_VERSION}
+echo "${BASH_VERSION}"
 for i in {1..10} # {1..10..2} the step option is not supported for Bash version lesser than 4.0
 do 
-    echo $i
+    echo "$i"
 done
 
 # for VARIABLES in file1 file2 file3
@@ -19,18 +19,18 @@ done
 # example check for directories
 for items in *
 do 
-    if [ -d $items ]
+    if [ -d "$items" ]
     then
-        echo $items
+        echo "$items"
     fi
 done
 
 # example check for files
 for files in *
 do 
-    if [ -f $files ]
+    if [ -f "$files" ]
     then 
-        echo $files
+        echo "$files"
     fi
 done
 
@@ -54,5 +54,5 @@ done
 # example
 for (( i=2; i<10; i++ ))
 do 
-    echo $i
+    echo "$i"
 done
