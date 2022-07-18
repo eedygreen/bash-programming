@@ -23,7 +23,7 @@ quit(){
 }
 
 # call the function with arguement
-say_my_name $1 $2       # ./functions.sh eedy green
+say_my_name "$1" "$2"       # ./functions.sh eedy green
 
 echo "Done"
 
