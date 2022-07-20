@@ -6,6 +6,8 @@
 readonly var=10
 echo "$var"
 
+# with readonly this function can be called but cannot be overwritten
+try_it
 
 try_it() {
     echo "Just testing readonly"
@@ -13,9 +15,6 @@ try_it() {
 
 # use -f for functions
 readonly -f try_it
-
-# with readonly this function can be called but cannot be overwritten
-try_it
 
 # this will throw an error: readonly function
 try_it() {
