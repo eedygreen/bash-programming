@@ -10,6 +10,7 @@ usage() {
     echo "usage $0 file_name"
 }
 
+
 [[ $# -eq 0 ]] && usage
 
 echo "-----------------------------"
