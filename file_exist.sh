@@ -10,7 +10,9 @@ usage() {
     echo "usage $0 file_name"
 }
 
-usage
+[[ $# -eq 0 ]] && usage
+
+echo "-----------------------------"
 
 if ( is_file_exist "$1" )
 then 
