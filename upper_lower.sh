@@ -13,7 +13,7 @@ usage(){
 usage
 
 read -r input
-letter=`(echo "$input" | awk '{print tolower($0)}')`
+letter=$(echo "$input" | awk '{print tolower($0)}')
 
 if [ "$letter" = "y" ]
 then
@@ -29,12 +29,23 @@ fi
 # single , will turn the first letter to lower case
 # single ^ will turn the first letter to upper case
 
-# if [ "${input,,}"="y" ]
+# if [ "${input,,}" = "y" ]
 # then
 #     echo "YES"
-#     elif [ "${input,,}"="n" ]
+#     elif [ "${input,,}" = "n" ]
 #     then
 #         echo "NO"
 # else   
-#     echo "Enter only Y/y or N/n"
+#     usage
+# fi
+
+
+# if [ "${input^^}" = "Y" ]
+# then
+#     echo "YES"
+# elif [ "${input^^}" = "N" ]
+# then
+#     echo "NO"
+# else    
+#     usage
 # fi
