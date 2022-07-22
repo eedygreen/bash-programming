@@ -9,4 +9,4 @@
 
 read -ra express
 
-printf "%.3f \n" $( echo "scale=4;${express[@]}" | bc )
+printf "%.3f \n" "$( echo "scale=4;${express[*]}" | bc )" # best practice use * instead of @ for arrays
