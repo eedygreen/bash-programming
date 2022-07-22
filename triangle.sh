@@ -10,7 +10,7 @@
 # The sum of any two sides will be greater than the third.
 
 readInt() {
-    read line
+    read -r line
     echo -n "$line"
 }
 x=$(readInt)
