@@ -15,5 +15,5 @@
 
 IFS=" " read -r num_of_lines        # number of lines as the total number of give integers
 # items=( $(cat) )                    # this will pass all the input in an arrary
-mapfile -t items  <<< $(cat)
+mapfile -t items  <<< "$(cat)"
 printf "%.3f \n" "$(echo "scale=4;$((${items[*]/%/ +}0))"/"$num_of_lines" | bc )"
