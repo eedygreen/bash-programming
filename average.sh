@@ -14,6 +14,6 @@
 # ( refers to elements of the list of integers for which the average is to be computed)
 
 IFS=" " read -r num_of_lines        # number of lines as the total number of give integers
-items=( $(cat) )                    # this will pass all the input in an arrary
-
+# items=( $(cat) )                    # this will pass all the input in an arrary
+mapfile -t items  <<< $(cat)
 printf "%.3f \n" "$(echo "scale=4;$((${items[*]/%/ +}0))"/"$num_of_lines" | bc )"
