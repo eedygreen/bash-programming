@@ -20,4 +20,4 @@ paste -d';' - - -
 
 paste -d\; - - -
 
-paste -d';' - - - $1
+paste -d';' - - - "$1"
