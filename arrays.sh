@@ -32,5 +32,6 @@ echo "remained item: ${list_items[*]}"
 # i.e you can chose to insert in any position regardless the indexes before are empty or not
 
 # challenges
-line=($(cat))
+mapfile line <<< "$(cat)"
+
 echo "${#line[*]}"
