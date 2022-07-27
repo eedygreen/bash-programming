@@ -14,7 +14,7 @@ tail -n 11 file_1
 # third worst case
 for ((n=0; n<=22; n++))
 do
-    read 
+    IFS= read -r
 
     if [ "$n" -ge 12 ] 
     then
