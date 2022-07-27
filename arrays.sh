@@ -30,3 +30,7 @@ echo "remained item: ${list_items[*]}"
 ######  Note #########
 # Bash permits empty arrays
 # i.e you can chose to insert in any position regardless the indexes before are empty or not
+
+# challenges
+line=($(cat))
+echo "${#line[*]}"
