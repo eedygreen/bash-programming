@@ -9,3 +9,11 @@ cut_input() {
 }
 
 cut_input
+# space delimiter to
+cut -d ' ' -f4     # identify and display its fourth word
+
+cut -d ' ' -f1-3  #identify and display its first three words.
+
+# Given a tab delimited file with several columns (tsv format) print the fields from second fields to last field.
+
+cut -f2-
