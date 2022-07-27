@@ -16,8 +16,8 @@ for ((n=0; n<=22; n++))
 do
     read 
 
-    if [ $n >= 12 ] 
+    if [ "$n" -ge 12 ] 
     then
-        echo ${REPLY}
+        echo "${REPLY}"
     fi
 done
