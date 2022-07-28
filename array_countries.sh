@@ -7,7 +7,7 @@
 
 # the best case
 countries=($(cat "$@"))
-echo ${countries[*]/[A-Z]/ .}
+echo "${countries[*]/[A-Z]/ .}"
 
 # with whileloop, this is the good case and using forloop is the wors case
 
@@ -17,5 +17,5 @@ while read -r input
 do
     countries=(${countries[*]} $input)
 done
-declare -a display_countries=( ${countries[*]/[A-Z]/.} )
-echo ${display_countries[*]}
+declare -a display_countries=( "${countries[*]/[A-Z]/.}" )
+echo "${display_countries[*]}"
