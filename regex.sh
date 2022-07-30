@@ -11,6 +11,9 @@ grep "\([0-9]\)"
 
 grep "\([0-9]\)\1" # 00 11
 
+# match these words "the that then those"
+grep -Ewi 'th(e|at|en|ose)'
+
 # stream editor
 # this only replaced the first occurrence match
 sed 's/old/new/' from_file.txt > to_file.txt
