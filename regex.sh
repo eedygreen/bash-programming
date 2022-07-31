@@ -35,7 +35,7 @@ sed 's/[0-9]/&&/g' from_file.txt > to_file.txt
 # replace the third match unix with linux
 sed 's/unix/linux/3g'
 
-# this will replace the match string only on the thirs line
+# this will replace the match string only on the third line
 sed '3 s/match/replace/'
 
 sed '1,3 s/match/replace/'  # range line 1 to 3
