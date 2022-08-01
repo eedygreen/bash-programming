@@ -107,3 +107,6 @@ sed -r 's/[0-9]{4} /**** /g'  # note there is use of trailing space to match the
 sed -E 's/[0-9][0-9][0-9][0-9] /**** /g'
 
 sed -r 's/([0-9]{4}\s){3}([0-9]{4})/**** **** **** \2/' # the first three groups of four digits
+
+# reverse the ordering of segments in each credit card number
+sed -r 's/([0-9]{4}) ([0-9]{4}) ([0-9]{4}) ([0-9]{4})/\4 \3 \2 \1/' 
