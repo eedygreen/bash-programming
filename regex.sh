@@ -95,4 +95,4 @@ sed 's/papers/{\&}/g'           # this will wrapp curly braces around paper {pap
 
 # Given an input file, in each line, highlight all the occurrences of 'thy' by wrapping them up in brace brackets. 
 # The search should be case-insensitive.
-sed s/papers/{\&}/ig  
+sed 's/papers/{\&}/ig  '
