@@ -96,3 +96,14 @@ sed 's/papers/{\&}/g'           # this will wrapp curly braces around paper {pap
 # Given an input file, in each line, highlight all the occurrences of 'thy' by wrapping them up in brace brackets. 
 # The search should be case-insensitive.
 sed 's/papers/{\&}/ig  '
+
+# Each line contains a credit card number in the form dddd dddd dddd dddd, where  denotes a decimal digit (i.e.,  through ). 
+# There are a total of  lines of credit card numbers.
+
+sed -r 's/[0-9]{4} /**** /g'  # note there is use of trailing space to match the digits and also to replace
+
+# the last digit won't be replaced because it has no trailing space and thus does not meet the match reqiurement
+
+sed -E 's/[0-9][0-9][0-9][0-9] /**** /g'
+
+sed -r 's/([0-9]{4}\s){3}([0-9]{4})/**** **** **** \2/' # the first three groups of four digits
