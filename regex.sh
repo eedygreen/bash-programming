@@ -82,10 +82,17 @@ sed '/linux/i "add a text here"'
 sed '/linux/c "replace with this text"' # this should replace the line with the words specified in the comment
 
 # Transform 'tr' command for sed is 'y'
+# Note
+# with  the "y" use complete word to avoid errors. 
+# error: imagine the above example translating terminal to TerminaL
 sed 'y/l/L/'     # this will change the lower case l to upper case L
 
 sed 'y/lt/LT/'   # this will change the "l" to "L" and "t" to "T"
 
-# Note
-# with  the "y" use complete word to avoid errors. 
-# error: imagine the above example translating terminal to TerminaL
+# highlight all accurences with wrapper
+sed 's/papers/{\&}/g'           # this will wrapp curly braces around paper {paper}
+
+
+# Given an input file, in each line, highlight all the occurrences of 'thy' by wrapping them up in brace brackets. 
+# The search should be case-insensitive.
+sed s/papers/{\&}/ig  
