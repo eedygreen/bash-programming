@@ -43,5 +43,5 @@ awk '{ if( $2 ~ /[0-9]/ ) print }' text_file.csv
 awk '{ if($2 =="" || $3 =="" || $4 =="" ) print "Not all scores are available for " $1 }'
 # or for brevity
 awk '{ NF!=4 print "Not all scores are available for" $1 }'
-# or
+# ors
 awk '{ if (NF < 4) print "Not all scores are available for " $1 }'
