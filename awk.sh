@@ -30,15 +30,18 @@ awk '/^[0-9]/ { print }' text_file.csv
 # every line that ends with numbers
 awk '/[0-9]$/ { print }' text_file.csv
 
-# awk works with conditionals
-awk '{ if( $1 ~ /234/ ) print }' text_file.csv
-
-# check if its a number
-awk '{ if( $2 ~ /[0-9]/ ) print }' text_file.csv
-
 # field delimiter
 awk -F: '{ print }' text_file.csv
 
+## awk works with conditionals
+awk '{ if( $1 ~ /234/ ) print }' text_file.csv
+
+# check if the second field is a number
+awk '{ if( $2 ~ /[0-9]/ ) print }' text_file.csv
 
 #  identify those lines that do not contain all three scores for students.
 awk '{ if($2 =="" || $3 =="" || $4 =="" ) print "Not all scores are available for " $1 }'
+# or for brevity
+awk '{ NF!=4 print "Not all scores are available for" $1 }'
+# or
+awk '{ if (NF < 4) print "Not all scores are available for " $1 }'
