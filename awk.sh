@@ -45,3 +45,13 @@ awk '{ if($2 =="" || $3 =="" || $4 =="" ) print "Not all scores are available fo
 awk '{ NF!=4 print "Not all scores are available for" $1 }'
 # ors
 awk '{ if (NF < 4) print "Not all scores are available for " $1 }'
+
+# awk if else statement
+# A student is considered to have passed if (s)he has a score 50  or more in each of the three subjects.
+awk '{ 
+    if ($2>=50 && $3>=50 && $4>=50)
+        print $1, ":", "Pass";
+    
+    else
+        print $1, ":", "Fail";
+}'
