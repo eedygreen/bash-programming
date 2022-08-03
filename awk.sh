@@ -3,6 +3,9 @@
 # awk print text
 # default delimiter is space
 
+# syntax
+# awk '/search pattern/ {actions}'
+
 awk '{ print }' text_file.csv
 
 awk '{ print $2 }' text_file.csv # print second column 
@@ -35,3 +38,7 @@ awk '{ if( $2 ~ /[0-9]/ ) print }' text_file.csv
 
 # field delimiter
 awk -F: '{ print }' text_file.csv
+
+
+#  identify those lines that do not contain all three scores for students.
+awk '{ if($2 =="" || $3 =="" || $4 =="" ) print "Not all scores are available for " $1 }'
