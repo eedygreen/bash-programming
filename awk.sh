@@ -45,3 +45,12 @@ awk '{ if($2 =="" || $3 =="" || $4 =="" ) print "Not all scores are available fo
 awk '{ NF!=4 print "Not all scores are available for" $1 }'
 # ors
 awk '{ if (NF < 4) print "Not all scores are available for " $1 }'
+
+# awk works with conditionals
+awk '{ if( $1 ~ /234/ ) print }' text_file.csv
+
+# check if its a number
+awk '{ if( $2 ~ /[0-9]/ ) print }' text_file.csv
+
+# field delimiter
+awk -F: '{ print }' text_file.csv
