@@ -78,7 +78,7 @@ awk '
 '
 
 # this can be added as a script transpos.awk
-BEGIN{
+BEGIN {
         RS="\n\n";
         FS="\n";
     }
