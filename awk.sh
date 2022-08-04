@@ -59,6 +59,6 @@ awk '{
 # Output Field Separator
 
 # replaced : with = and print only column 2 and 4
-awk -F':' BEGIN'{ OFS='=' }' '{ print $2,$4}'
+awk -F':' 'BEGIN{ OFS="=" } { print $2,$4}'
 
 # male:eedy age=311 as column 2 & 4 will become male=eedy and age=311
