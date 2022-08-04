@@ -55,3 +55,40 @@ awk '{
     else
         print $1, ":", "Fail";
 }'
+
+# Output Field Separator
+
+# replaced : with = and print only column 2 and 4
+awk -F':' 'BEGIN{ OFS="=" } { print $2,$4}'
+
+# male:eedy age=311 as column 2 & 4 will become male=eedy and age=311
+
+# remove the :
+
+awk -F':' '{ print $2,$4}'
+
+# tranpose vertical to horizontal with Record Separator
+# Note: new line is a field in RS
+awk '
+    BEGIN{
+        RS="\n\n"
+        FS="\n"
+    }
+    { print $1,$2 }
+'
+
+# this can be added as a script transpos.awk
+BEGIN {
+        RS="\n\n";
+        FS="\n";
+    }
+    { print $1,$2 }
+
+awk -f transpos.awk file.text
+
+# NR give the Number of Records
+# print each line with numbers
+awk '{ print "Processing: ", NR }END { print NR, "Total record processed }' file.text
+
+# NF give the total number of field in a record
+
