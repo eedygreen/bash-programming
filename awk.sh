@@ -42,6 +42,7 @@ awk '{ if( $2 ~ /[0-9]/ ) print }' text_file.csv
 #  identify those lines that do not contain all three scores for students.
 awk '{ if($2 =="" || $3 =="" || $4 =="" ) print "Not all scores are available for " $1 }'
 # or for brevity
+# NF give the total number of field in a record
 awk '{ NF!=4 print "Not all scores are available for" $1 }'
 # ors
 awk '{ if (NF < 4) print "Not all scores are available for " $1 }'
@@ -90,5 +91,7 @@ awk -f transpos.awk file.text
 # print each line with numbers
 awk '{ print "Processing: ", NR }END { print NR, "Total record processed }' file.text
 
-# NF give the total number of field in a record
+# ORS, print every records with = separating each record
+awk 'BEGIN { ORS="=" } { print }'
 
+awk 'ORS=NR%2?";"":""\n"'
