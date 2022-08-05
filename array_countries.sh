@@ -28,3 +28,10 @@ echo "${display_countries[*]}"
 ctry=($(cat))
 ctry=${ctry[*]}
 echo "$ctry $ctry $ctry"
+
+ctr=()
+while read countries
+do 
+    ctr+=($countries)
+done
+echo  "${ctr[*]}"
