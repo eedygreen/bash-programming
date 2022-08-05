@@ -30,7 +30,7 @@ ctry=${ctry[*]}
 echo "$ctry $ctry $ctry"
 
 ctr=()
-while read countries
+while read -r countries
 do 
     ctr+=($countries)
 done
