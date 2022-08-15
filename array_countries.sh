@@ -35,3 +35,16 @@ do
     ctr+=($countries)
 done
 echo  "${ctr[*]}"
+
+countries=( $(cat) )
+echo "${countries[*]:3:5}"  # starts at 3rd element and stops at 7th elements. from 3rd, 4th, 5th, 6th, & 7th equals 5
+
+# You are given a list of countries, each on a new line. Your task is to read them into an array and 
+# then filter out (remove) all the names containing the letter 'a' or 'A'.
+
+ctries=( $(cat))
+echo "${ctries[*]/*[aA]*/}"  # this should work but it has empty spaces
+
+# reomve the spaces
+
+echo "${ctries[*]/*[aA]*/}" | sed "s/^\s*//g"
