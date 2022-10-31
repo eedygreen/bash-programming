@@ -25,6 +25,6 @@ do
     isah)
         echo "$name selected";;
     *)
-        echo "Error";;
+        echo "Error! ENTER THE NUMBER BETWEEN ";;
     esac
 done
